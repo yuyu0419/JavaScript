@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="a">
+        <p>01</p>
+        <div>
+            <button data-num="0" class="prev">&lt;</button>
+            <button data-num="1" class="next">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        var con = document.querySelector('p');
+        var btn = document.querySelectorAll('button');
+        var idx = 0;
+
+
+        btn[0].addEventListener('click', fun);
+        btn[1].addEventListener('click', fun);
+
+        function fun() { //console.log(this);
+            var move = 0;
+
+            //조건문에 사용할 수 있는 것들
+            //this.textContent == '>'내용
+            //console.log(this.textContent == '>')
+
+            //this.dataset.num == '1'속성
+            //console.log(this.dataset.num == '1');
+
+            //this.className == 'next' 클래스 명
+            //console.log(this.className == 'next')
+
+            //this.classList.contains('next') 클래스 존재유무
+            //console.log(this.classList.contains('next')); 클래스의 이름에 next가 있는지 찾는 명령.
+
+            //비교연산자를 쓰지않는 if문은 조건 앞에 느낌표만 넣어주면 반대 의미가 된다. !this.dataset.num == '1'
+            if (this.dataset.num == '1') {
+                idx++; //변수 idx가 함수 안에 있으면 값이 초기화되서 증가가 되지 않으므로 함수 밖으로 빼준다.
+                //move = 100 * idx;
+            } else {
+                idx--;
+                //move = 100 * idx;//100앞에 -가 있으면 앞으로 갔던것도 아예 안보이게 됨
+            }
+            move = 100 * idx; //똑같은 조건이므로 밖으로 빼준다
+            con.style.marginLeft = move + 'px';
+        } //이런 구문을 만났을 때 컴퓨터는 함수를 제일 최상위로 만든다. 즉 함수가 제일 위로 올라감.
+        //console.log(this); this는 부모를 의미하는데 어디에 넣느냐에 따라 부모가 달라진다.
+    </script>
+
+</body></html>

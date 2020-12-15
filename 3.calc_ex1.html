@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <aticle>
+        <h2>산술연산자</h2>
+        <div class="ex_1">
+            (20+20)*40 / 2
+        </div>
+    </aticle>
+
+    <aticle>
+        <h2>할당연산자</h2>
+        <div class="ex_2">
+            ex_1 결과값에 (200+'$') 할당시키시오.
+        </div>
+    </aticle>
+
+    <aticle>
+        <h2>비교연산자</h2>
+        <div class="ex_3">
+            조건 => 20과 10은 같지않다.
+            <br>출력) true일때 => 통과, false일때 => 실패
+        </div>
+    </aticle>
+
+    <script>
+        /*산술연산자*/
+        var a = 20;
+        var re = document.querySelector('.ex_1');
+
+        re.innerHTML = (a + a) * 40 / 2;
+
+
+        /*할당연산자*/
+        var re_0 = (a + a) * 40 / 2;
+        var re_1 = document.querySelector('.ex_2')
+
+        re_1.innerHTML += re_0 + 200 + '$';
+
+        /*비교연산자*/
+        var re_2 = document.querySelector('.ex_3')
+        if(20 != 10){
+            re_2.innerHTML = '통과'
+        }else{
+            re_2.innerHTML = '실패'
+        }
+    </script>
+
+
+</body></html>

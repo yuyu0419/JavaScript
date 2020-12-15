@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="a">
+        <p>01</p>
+        <p>02</p>
+        <p>03</p>
+    </div>
+
+    <script>
+        var div = document.querySelector('.a');
+        //console.log(div.childNodes) 태그안의 스페이스(빈공간)까지 확인함
+        //console.log(div.children) 유사배열임. 자식요소만 체크함 
+        var pAll = div.querySelectorAll('p'); //console.log(div.querySelector('p')) 첫번째 p태그
+
+        //pAll.addEventListener('click',function(){});p태그가 백개가 넘을 수도 있으므로 반복문사용
+
+        for (var i = 0; i < 3; i++) { //i가 3보다 작지만 i가 3까지 반복될때 반복문이 끝나기 때문에 총 0,1,2,3까지 반복이 된다. 마지막 i의 결과값은 3이 된다.
+            pAll[i].addEventListener('click', function() {
+                console.log('클릭')
+            });
+        };
+    </script>
+</body></html>
