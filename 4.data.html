@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <aticle>
+        <h2>산술연산자</h2>
+        <div class="calc_1">
+            console에 출력한 내용을 이곳에 넣으시오.
+        </div>
+    </aticle>
+
+
+    <aticle>
+        <h2>할당연산자</h2>
+        <div class="calc_2">
+            console에 출력한 내용을 이곳에 넣으시오.
+        </div>
+    </aticle>
+
+
+    <aticle>
+        <h2>비교연산자</h2>
+        <div class="calc_3">
+            console에 출력한 내용을 이곳에 넣으시오.
+        </div>
+    </aticle>
+
+
+    <aticle>
+        <h2>배열(array)</h2>
+        <div class="calc_4">
+            console에 출력한 내용을 이곳에 넣으시오.
+        </div>
+    </aticle>
+
+
+    <script>
+        /*number, string, array*/
+        var dataType = Number(10);
+        var dataType = String(10);
+        var dataType = Array(10, 20);
+        console.log(dataType);
+
+        /*var dataType = 10; (문자)
+        var dataType = '10'; (숫자)
+        var dataType = [10, 20]; (배열)*/
+
+        var dataType = 10;
+        var dataType = '10';
+        var dataType = [10, 20];
+
+        console.log('10+10 =>' + (10 + 10));
+        console.log('20+10 =>' + 20 * 10);
+        console.log('2**3 =>' + 2 ** 3);
+        console.log('30/10 =>' + 30 / 10);
+        console.log('6%5 =>' + 6 % 5);
+
+        /* 26%5는 26을 5로 나눴을때 나오는 나머지 값*/
+
+
+        var calc_1 = document.querySelector('.calc_1')
+
+        calc_1.innerHTML = '10+10 =>' + Number(10 + 10);
+        calc_1.innerHTML += '<br>20+10 =>' + Number(20 + 10);
+        calc_1.innerHTML += '<br>2**3 =>' + Number(2 ** 3);
+        calc_1.innerHTML += '<br>30/10 =>' + Number(30 / 10);
+        calc_1.innerHTML += '<br>6%5 =>' + Number(6 % 5);
+
+
+        /*할당연산자*/
+        var ex1 = 10;
+        ex1 += 2;
+        ex1 -= 2;
+        ex1 *= 2;
+        ex1 /= 2;
+        ex1 %= 2;
+        console.log(ex1)
+
+        var calc_2 = document.querySelector('.calc_2')
+
+        calc_2.innerHTML = 'ex1 => 10';
+        calc_2.innerHTML += '<br>ex1 += 2' + (ex1 += 2);
+        calc_2.innerHTML += '<br>ex1 -= 2' + (ex1 -= 2);
+        calc_2.innerHTML += '<br>ex1 *= 2' + (ex1 *= 2);
+        calc_2.innerHTML += '<br>ex1 /= 2' + (ex1 /= 2);
+        calc_2.innerHTML += '<br>ex1 %= 2' + (ex1 %= 2);
+
+
+
+
+        /*비교연산자*/
+        var calc_3 = document.querySelector('.calc_3');
+
+        /* 10 == 10 좌항과 우항의 값이 동등하다(true)
+         10 === 10 좌항과 우항의 값이 같으면 true(type과 data 모두)
+         10 != 20 좌항과 우항의 값이 다르면 true 
+         10 !== 20 좌항과 우항의 값과 타입이 다르면 true 
+         20 > 10 좌항이 우항보다 크면 true
+         20 >= 10 좌항이 우항보다 크거나 같으며 true */
+
+
+        var calc_3 = document.querySelector('.calc_3')
+
+        calc_3.innerHTML = '10 == 10 좌항과 우항의 값이 동등하면 => ' + (10 == 10);
+        calc_3.innerHTML += '<br>10 === 10 좌항과 우항의 값이 같으면  => ' + (10 === 10);
+        calc_3.innerHTML += '<br>10 != 20 좌항과 우항의 값이 다르면=> ' + (10 != 20);
+        calc_3.innerHTML += '<br>10 !== 20 좌항과 우항의 값과 타입이 다르면 => ' + (10 !== 20);
+        calc_3.innerHTML += '<br>20 > 10 좌항이 우항보다 크면  => ' + (20 > 10);
+        calc_3.innerHTML += '<br>20 >= 10 좌항이 우항보다 크거나 같으며 => ' + (20 >= 10);
+
+
+        calc_3.innerHTML += '<pre><br>[조건문] - ' + '비교연산자의 값에 따라 2개의 실행 명령 중 한개만 실행됨';
+        calc_3.innerHTML += '<br>if(비교연산자(true or false)){' + '<br>조건이 true면 실행' + '<br>}else{<br>조건이 false면 실행}';
+
+
+        /*배열(array)*/
+
+        var calc_4 = document.querySelector('.calc_4');
+        var arr = [80, 90, 60, 50, 40, 70, 80, 90, 100, 80, 70, 60, 50, 40, 20, 30, 50, 60, 70];
+        var total = arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5];
+        var avg = total / arr.length;
+
+        console.log('총점:' + total + '/평균:' + avg);
+
+        calc_4.textContent = '총점:' + total + '평균:' + avg;
+
+
+        /*calc_4.innerHTML += '<br>'+arr[0];
+        calc_4.innerHTML += '<br>'+arr[1];
+        calc_4.innerHTML += '<br>'+arr[2];
+        calc_4.innerHTML += '<br>'+arr[3];
+        calc_4.innerHTML += '<br>'+arr[4];
+        calc_4.innerHTML += '<br>'+arr[5];*/
+
+        for (var i = 0; i < arr.length; i++) {
+            calc_4.innerHTML += '<br>' + arr[i];
+        }
+        //for은 중괄호안에 들어있는것을 반복시키는것
+    </script>
+
+
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="result"></div>
+
+
+    <script>
+        var result = document.querySelector('.result');
+
+        var id = prompt('아이디를 입력해주세요.');
+        var pw = prompt('패스워드를 입력해 주세요.');
+        if (id == 'gloria' && pw == '1234') { //        true일때
+            result.textContent = id + '님 환영합니다.';
+        } else {
+            //            false일때
+            result.textContent = '다시 시도하세요.';
+        }
+    </script>
+
+    <!--console.log(result);-->
+
+    <!--브라우저의 콘솔에서 확인할 수 있는 부등호
+10 < 9 false
+10 > 9 true
+10  == 9 false
+10 >= 9 true
+10 <= 9 false
+10 != 9 true
+-->
+
+   
+    <!--
+'chase' == 'chase' && '1234' == '1234' true(&&두개임)
+'chase' == 'chase' || '1234' == '1234' true(||는 or을 의미함
+두가지 조건 중 하나만이라도 맞는다면 true가 뜸)
+-->
+
+</body></html>
